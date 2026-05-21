@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background:
+    radial-gradient(circle at top left, rgba(99,102,241,0.25), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(59,130,246,0.20), transparent 25%),
+    linear-gradient(135deg, #0f172a, #111827, #1e293b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    color: white;
+    padding: 20px;
+}
+
+/* ---------- GLASS EFFECT CARD ---------- */
+
+.home-box,
+.signup-form,
+.dashboard-box{
+    width: 100%;
+    max-width: 460px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 28px;
+    padding: 45px;
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.35),
+    inset 0 1px 1px rgba(255,255,255,0.08);
+    animation: smoothAppear 0.7s ease;
+}
+
+/* ---------- HEADINGS ---------- */
+
+.main-heading,
+.dashboard-heading{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+
+.sub-heading,
+.dashboard-text{
+    color: #cbd5e1;
+    font-size: 16px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.signup-form h2{
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ---------- INPUTS ---------- */
+
+.form-control{
+    height: 56px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.08);
+    color: white;
+    padding-left: 18px;
+    margin-bottom: 18px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control::placeholder{
+    color: #cbd5e1;
+}
+
+.form-control:focus{
+    background: rgba(255,255,255,0.12);
+    border-color: #60a5fa;
+    box-shadow: 0 0 18px rgba(96,165,250,0.35);
+    color: white;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.btn{
+    height: 55px;
+    border-radius: 16px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.btn-primary{
+    background: linear-gradient(135deg, #d0eced, #2563eb);
+}
+
+.btn-success{
+    background: linear-gradient(135deg, #b7dbcf, #059669);
+}
+
+.btn-danger{
+    background: linear-gradient(135deg, #eac8c8, #dc2626);
+}
+
+.btn-warning{
+    background: linear-gradient(135deg, #efdab6, #d97706);
+}
+
+.btn-info{
+    background: linear-gradient(135deg, #d1eff4, #0891b2);
+}
+
+.btn-dark{
+    background: linear-gradient(135deg, #374151, #111827);
+}
+
+/* ---------- LAYOUTS ---------- */
+
+.home-container,
+.signup-container,
+.dashboard-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- DASHBOARD ---------- */
+
+.dashboard-box{
+    max-width: 550px;
+}
+
+.dashboard-box .btn{
+    margin-bottom: 14px;
+}
+
+/* ---------- ANIMATION ---------- */
+
+@keyframes smoothAppear{
+
+    from{
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

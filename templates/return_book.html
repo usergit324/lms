@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Return Book</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="signup-container">
+
+        <form action="/return_book"
+              method="POST"
+              class="signup-form">
+
+            <h2 class="text-center mb-4">
+                Return Book
+            </h2>
+
+            <input type="text"
+                   name="student_name"
+                   class="form-control"
+                   placeholder="Enter Student Name"
+                   required>
+
+            <input type="text"
+                   name="book_title"
+                   class="form-control"
+                   placeholder="Enter Book Title"
+                   required>
+
+            <input type="date"
+                   name="return_date"
+                   class="form-control"
+                   required>
+
+            <button type="submit"
+                    class="btn btn-info w-100 mt-3">
+                Return Book
+            </button>
+
+            <a href="/dashboard"
+               class="btn btn-dark w-100 mt-3">
+                Back To Dashboard
+            </a>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
